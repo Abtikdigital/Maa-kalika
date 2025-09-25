@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Logo from "../assets/Logo/logo.png";
+import Logo from "../assets/Logo/WhiteLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons/faPhoneVolume";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
