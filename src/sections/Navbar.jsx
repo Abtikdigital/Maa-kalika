@@ -57,7 +57,7 @@ function Navbar() {
   return (
     <nav
       className={`w-full py-6 px-4 md:px-12 flex justify-between items-center fixed top-0 z-50 transition-colors duration-700 ${
-        isScrolled ? "bg-black/70" : "bg-[#FFFFFF19]"
+        isScrolled ? "bg-black/70" : "bg-black/70 lg:bg-[#FFFFFF19]"
       }`}
     >
       {/* Logo */}
@@ -66,7 +66,7 @@ function Navbar() {
       </section>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-12 font-1">
+      <ul className="hidden lg:flex gap-12 font-1">
         {navItems.map((item) => (
           <li key={item.id} className="cursor-pointer w-fit">
             <button
@@ -88,7 +88,7 @@ function Navbar() {
       <div className="hidden lg:block w-px h-10 bg-white mx-6"></div>
 
       {/* Call Button */}
-      <section className="hidden md:flex items-center gap-4 cursor-pointer">
+      <section className="hidden lg:flex items-center gap-4 cursor-pointer">
         <a
           href="tel:+918877665533"
           className="flex justify-center items-center gap-3 cursor-pointer"
@@ -111,7 +111,7 @@ function Navbar() {
 
       {/* Mobile Menu Toggle */}
       <button
-        className="md:hidden text-white cursor-pointer"
+        className="lg:hidden text-white cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <FontAwesomeIcon icon={isOpen ? faXmark : faBars} size="lg" />
@@ -119,7 +119,7 @@ function Navbar() {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="absolute top-20 left-0 w-full bg-black/90 flex flex-col items-center gap-6 py-6 md:hidden z-50">
+        <div className={`absolute top-24 left-0 w-full ${   isScrolled ? "bg-black/70" : "bg-black/70"} flex flex-col items-center gap-6 py-6 lg:hidden z-50`}>
           <ul className="flex flex-col gap-6 font-1 w-full px-6">
             {navItems.map((item) => (
               <li key={item.id} className="w-fit mx-auto cursor-pointer">
