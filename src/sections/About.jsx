@@ -16,7 +16,7 @@ function About() {
             majority have suffered alteration in some form, by injected humour,
             or randomised words which don’t look even slightly believable.
           </p>
-          <section className=" grid grid-cols-2 gap-10">
+          <section className=" grid md:grid-cols-2 gap-10">
             <div className="space-y-2">
               <h1 className="sub-heading-1 !text-[#4BAF47]">
                 Modern agriculture types
@@ -33,10 +33,10 @@ function About() {
             <button className="primary-button">Discover More</button>
           </div>
         </section>
-        <section className="grid grid-cols-2 gap-10">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* First Image Section */}
           <div>
-            <img src={Image2} className="w-full " />
+            <img src={Image2} className="w-full  h-auto " />
             <section className="relative flex justify-center ">
               <h2 className="font-2 absolute -top-5  text-[#1F1E17] text-5xl font-extrabold">
                 20
@@ -46,7 +46,7 @@ function About() {
             </section>
           </div>
           <div>
-            <img src={Image3} className="w-full" />
+            <img src={Image3} className="w-full h-104 md:h-auto" />
           </div>
         </section>
       </section>

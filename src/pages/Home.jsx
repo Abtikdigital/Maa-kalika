@@ -8,6 +8,7 @@ import Faqs from '../sections/Faqs'
 import OurServices from '../sections/OurServices'
 import About from '../sections/About'
 import Hero from '../sections/Hero'
+import Team from '../sections/Team'
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
     <About />
     <OurServices />
     <Faqs />
+    <Team />
     <NewsAndArticle />
     <Contact />
 

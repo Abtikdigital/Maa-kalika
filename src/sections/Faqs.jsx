@@ -43,7 +43,7 @@ function Faqs() {
           <div className="flex justify-center  items-center md:justify-start self-center relative">
             <img
               src={Image1}
-              className="rounded-lg w-3/4 "
+              className="rounded-lg md:w-3/4 "
               alt="FAQ"
             />
             <section className="bg-[#EEC044] rounded-t-2xl absolute bottom-0 left-[3.5%] px-8 py-3">
@@ -91,7 +91,7 @@ function Faqs() {
                         isOpen ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0"
                       }`}
                     >
-                      <p className="text-gray-700">{data.answer}</p>
+                      <p className=" paragraph-1">{data.answer}</p>
                     </div>
                   </div>
                 );
