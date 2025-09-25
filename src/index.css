@@ -1,68 +1,35 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.font-1 {
+  font-family: "Manrope";
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.font-2 {
+  font-family: "Covered By Your Grace";
 }
-a:hover {
-  color: #535bf2;
+.primary-button {
+  @apply bg-[#4BAF47] hover:bg-[#3a9e3c] rounded-lg text-white px-6 py-3 cursor-pointer  transition-all duration-300;
+  font-family: "Manrope";
+}
+.heading-1{
+  @apply text-white text-6xl font-extrabold tracking-tight text-center ;
+  font-family: "Manrope"
+}
+.heading-2 {
+  @apply text-4xl text-[#1F1E17] font-extrabold;
+  font-family: "Manrope";
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.heading-3 {
+  @apply text-xl text-[#1F1E17] font-extrabold;
+  font-family: "Manrope";
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.sub-heading-1 {
+  @apply text-[#EEC044] text-2xl;
+  font-family: "Covered By Your Grace";
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.paragraph-1 {
+  @apply text-[#A5A49A] text-base;
+  font-family: "Manrope";
 }
