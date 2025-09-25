@@ -90,7 +90,7 @@ function Navbar() {
       {/* Call Button */}
       <section className="hidden lg:flex items-center gap-4 cursor-pointer">
         <a
-          href="tel:+918877665533"
+          href="tel:+917822815169"
           className="flex justify-center items-center gap-3 cursor-pointer"
         >
           <button className="border-[#EEC044] border rounded-full h-10 w-10 p-2 flex justify-center items-center cursor-pointer">
@@ -103,7 +103,7 @@ function Navbar() {
           <div className="flex flex-col">
             <h3 className="text-white font-1 text-sm">Call Anytime</h3>
             <label className="text-white font-1 text-sm">
-              +91 8877 66 5533
+              +91 7822 81 5169
             </label>
           </div>
         </a>
@@ -138,7 +138,7 @@ function Navbar() {
             ))}
           </ul>
           <a
-            href="tel:+918877665533"
+            href="tel:+917822815169"
             className="flex justify-center items-center gap-3 mt-4 cursor-pointer"
           >
             <button className="border-[#EEC044] border rounded-full h-10 w-10 p-2 flex justify-center items-center cursor-pointer">
@@ -151,7 +151,7 @@ function Navbar() {
             <div className="flex flex-col">
               <h3 className="text-white font-1 text-sm">Call Anytime</h3>
               <label className="text-white font-1 text-sm">
-                +91 8877 66 5533
+                +91 7822 81 5169
               </label>
             </div>
           </a>

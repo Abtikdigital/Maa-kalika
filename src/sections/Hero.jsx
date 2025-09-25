@@ -12,17 +12,18 @@ function Hero() {
     >
       <div className="h-full flex justify-center items-center">
         <h2 className="heading-1">
-          Natural Products <br />
-          For Lovers of{" "}
+       
+          Cultivating Future{" "}
+        <br />
           <span className="relative inline-block">
-            <span className="inline-block text-[#EEC044]">Healthy</span>
+            <span className="inline-block text-[#EEC044]">with Innovation</span>
             <img
               src={ArrowImage}
               alt="Arrow"
               className="absolute -bottom-2 right-0 "
             />
           </span>
-          <br /> Organic Food
+          <br /> Modern & Vintage Agriculture
         </h2>
       </div>
     </section>

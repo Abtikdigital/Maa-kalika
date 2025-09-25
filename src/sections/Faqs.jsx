@@ -7,46 +7,53 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 function Faqs() {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
-  const faqData = [
-    {
-      question: "What are the best crops to grow in India during the Kharif season?",
-      answer:
-        "During the Kharif season (June–October), popular crops include rice, maize, cotton, soybeans, groundnut, and pulses, as they thrive with the onset of monsoon rains.",
-    },
-    {
-      question: "How can farmers improve soil fertility naturally?",
-      answer:
-        "Farmers can improve soil fertility through crop rotation, using organic manure, vermicompost, and green manures, as well as practicing conservation tillage to retain soil health.",
-    },
-    {
-      question: "What are the benefits of drip irrigation in agriculture?",
-      answer:
-        "Drip irrigation saves up to 50% water compared to traditional methods, improves crop yield, reduces weed growth, and ensures nutrients reach plant roots directly.",
-    },
-  ];
+const faqData = [
+  {
+    question: "Best Kharif crops?",
+    answer: "Rice, maize, cotton, soybeans, groundnut, and pulses thrive in monsoon.",
+  },
+  {
+    question: "How to improve soil naturally?",
+    answer: "Use crop rotation, organic manure, and green manures.",
+  },
+  {
+    question: "Benefits of drip irrigation?",
+    answer: "Saves water, improves yield, reduces weeds, and feeds roots directly.",
+  },
+  {
+    question: "Does MaaKalika Agro offer training?",
+    answer: "Yes, we provide workshops for sustainable farming.",
+  },
+  {
+    question: "Are the products fully organic?",
+    answer: "Yes, all methods are chemical-free and safe.",
+  },
+];
+
+
 
   return (
-    <section className="relative  max-w-screen  ">
+    <section className="relative  max-w-screen    md:h-screen   ">
       {/* Background Image */}
-      <div className="hidden lg:block lg:absolute inset-0 left-0  ">
+      <div className="hidden lg:block lg:absolute inset-0 left-0   ">
         <img
           src={BgImage1}
           alt="FAQ Background"
-          className="max-w-1/4 h-full"
+          className="w-lg h-full  object-cover"
         />
       </div>
 
       {/* FAQ content on top of image */}
-      <div className="relative  z-10 py-10 md:py-16 px-6 md:px-20 lg:px-50  ">
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-center">
+      <div className="relative  z-10 py-10 md:py-16 px-6 md:px-20 lg:px-30  h-full ">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10  items-center  justify-center">
           {/* Left Side Image (keep as is) */}
-          <div className="flex justify-center  items-center md:justify-start self-center relative">
+          <div className="flex justify-center  lg:translate-x-34  items-center h-fit  md:justify-start  relative">
             <img
               src={Image1}
-              className="rounded-lg md:w-3/4 "
+              className="rounded-lg md:w-3/4  h-fit transition-all duration-400  "
               alt="FAQ"
             />
-            <section className="bg-[#EEC044] rounded-t-2xl absolute bottom-0 left-[3.5%] px-8 py-3">
+            <section className="bg-[#EEC044] rounded-t-2xl absolute bottom-0 left-[10%] px-8 py-3">
                 <h2 className="sub-heading-1 !text-white text-center">Call us anytime</h2>
                 <h3 className="heading-2 !text-white">666 888 0000</h3>
 
@@ -54,14 +61,14 @@ function Faqs() {
           </div>
 
           {/* Right Side FAQs */}
-          <div className="space-y-3 ">
+          <div className="space-y-3  ">
             <header className="mb-4">
               <h1 className="sub-heading-1">Frequently Asked Questions</h1>
               <h2 className="heading-2">Your Agriculture Queries Answered</h2>
             </header>
 
             {/* FAQ Items */}
-            <section className="space-y-2">
+            <section className="space-y-2 ">
               {faqData.map((data, index) => {
                 const isOpen = index === selectedIndex;
                 return (

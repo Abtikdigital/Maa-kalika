@@ -1,4 +1,4 @@
-import React from "react";
+import BgImage1 from "../assets/Contact/BgImage.png"
 
 function Contact() {
   return (
@@ -12,30 +12,30 @@ function Contact() {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
-      <section className="space-y-3 flex flex-col justify-center">
+      <section className="space-y-6 flex flex-col justify-center " >
         <header>
           <h1 className="sub-heading-1">Contact Us</h1>
           <h2 className="heading-2">Write Message</h2>
         </header>
         <form className="space-y-6">
-          <div className="grid lg:grid-cols-2 gap-3  ">
+          <div className="grid lg:grid-cols-2 gap-3   ">
             <div className="">
               <input
                 placeholder="Name"
-                className="text-[#878680] w-full  border px-3 py-3 rounded-md"
+                className="text-[#878680] w-full   border-2 border-[#878680]   px-3 py-3 rounded-md"
               />
             </div>
             <div className="">
               <input
                 placeholder="Email"
-                className="text-[#878680] w-full border px-3 py-3 rounded-md"
+                className="text-[#878680] w-full border-2 border-[#878680]  px-3 py-3 rounded-md"
               />
             </div>
           </div>
           <div>
             <textarea
               placeholder="Message"
-              className="text-[#878680] resize-none w-full px-3 border py-3 rounded-md max-h-full overflow-y-auto"
+              className="text-[#878680] resize-none border-2 border-[#878680] w-full px-3  py-3 rounded-md max-h-full overflow-y-auto"
               
               rows={4}
             ></textarea>

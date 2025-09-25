@@ -7,9 +7,36 @@ import { faTractor } from "@fortawesome/free-solid-svg-icons";
 
 function OurServices() {
   const servicesData = [
-    { heading: "heading2", description: "heading2", image: Image1 },
-    { heading: "heading2", description: "heading2", image: Image2 },
-    { heading: "heading2", description: "heading2", image: Image3 },
+    {
+      heading: "Sustainable Farming Solutions",
+      description:
+        "Helping farmers adopt eco-friendly and high-yield methods for a better tomorrow.",
+      image: Image1,
+    },
+    {
+      heading: "Organic Crop Production",
+      description:
+        "From seeds to harvest – pure, chemical-free farming that ensures healthy produce.",
+      image: Image2,
+    },
+    {
+      heading: "Agri-Tech Consulting",
+      description:
+        "Introducing modern tools, irrigation systems, and smart practices for maximum productivity.",
+      image: Image3,
+    },
+     {
+      heading: "Agro Supply Chain & Distribution",
+      description:
+        "Connecting farmers directly with markets for fair pricing and faster delivery.",
+      image: Image3,
+    },
+     {
+      heading: "Training & Farmer Education",
+      description:
+        "Workshops, awareness programs, and training sessions for modern agricultural innovation.",
+      image: Image3,
+    },
   ];
 
   // store heights for each card
@@ -22,7 +49,10 @@ function OurServices() {
   }, []);
 
   return (
-    <section className="px-6 md:px-20 lg:px-30  py-10 md:py-16 bg-[#F8F7F0] space-y-8" id="services">
+    <section
+      className="px-6 md:px-20 lg:px-30  py-10 md:py-16 bg-[#F8F7F0] space-y-8"
+      id="services"
+    >
       <header>
         <h1 className="sub-heading-1 text-center">Our Services</h1>
         <h2 className="heading-2 text-center">What We Offer</h2>
@@ -30,7 +60,10 @@ function OurServices() {
 
       <section className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {servicesData.map((data, index) => (
-          <div key={index} className="relative transition-all duration-300 hover:translate-y-3 cursor-pointer">
+          <div
+            key={index}
+            className="relative transition-all duration-300 hover:translate-y-3 cursor-pointer"
+          >
             <img
               ref={(el) => (imageRefs.current[index] = el)}
               src={data.image}
@@ -38,7 +71,7 @@ function OurServices() {
               alt=""
             />
 
-            <section className="bg-white shadow-md p-6 space-y-2 rounded-b-lg mt-0">
+            <section className="bg-white shadow-md p-6 space-y-2 rounded-b-lg mt-0  h-44">
               <h2 className="heading-3">{data.heading}</h2>
               <p className="paragraph-1">{data.description}</p>
             </section>

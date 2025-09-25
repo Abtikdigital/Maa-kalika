@@ -9,6 +9,7 @@ import OurServices from '../sections/OurServices'
 import About from '../sections/About'
 import Hero from '../sections/Hero'
 import Team from '../sections/Team'
+import Partner from '../sections/Partner'
 
 function Home() {
   return (
@@ -21,7 +22,7 @@ function Home() {
     <Team />
     <NewsAndArticle />
     <Contact />
-
+    <Partner />
     <Footer />
     <CopyRight />
     </>

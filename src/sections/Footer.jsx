@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Logo from "../assets/Logo/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,7 +16,22 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
-  const navItems = ["Home", "About", "Services", "Contact"];
+  const navItems = [
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Services", id: "services" },
+    { name: "Contact", id: "contact" },
+  ];
+
+  // Smooth scroll to section
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const yOffset = -80; // Adjust for navbar height
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
 
   return (
     <footer className="bg-[#24231D] text-white px-6 py-10 md:px-20 md:py-16 lg:px-30 lg:py-16 flex flex-col lg:flex-row justify-between items-start gap-10 md:gap-16">
@@ -53,12 +69,17 @@ const Footer = () => {
           {navItems.map((item, index) => (
             <li
               key={index}
-              className="text-[#A5A49A] flex items-center  text-sm gap-2 w-fit cursor-pointer relative group"
+              className="text-[#A5A49A] cursor-pointer flex items-center text-sm gap-2 w-fit  relative group"
             >
               <FontAwesomeIcon icon={faLeaf} className="text-[#EEC044]" />
-              {item}
-              {/* Hover Filler Line */}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#4BAF47] transition-all duration-300 rounded-lg group-hover:w-full"></span>
+              <button
+                onClick={() => scrollToSection(item.id)}
+                className="relative cursor-pointer"
+              >
+                {item.name}
+                {/* Hover Filler Line */}
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#4BAF47] transition-all duration-300 rounded-lg group-hover:w-full"></span>
+              </button>
             </li>
           ))}
         </ul>
@@ -74,16 +95,16 @@ const Footer = () => {
         <ul className="flex flex-col gap-2">
           <li className="flex items-center gap-2 text-[#A5A49A] group cursor-pointer text-sm">
             <FontAwesomeIcon icon={faPhone} className="text-[#EEC044]" />
-            <span className="group-hover:underline">666 888 0000</span>
+            <span className="group-hover:underline">+91 7822 81 5169</span>
           </li>
-          <li className="flex items-center  gap-2 text-[#A5A49A] group cursor-pointer text-sm">
+          <li className="flex items-center gap-2 text-[#A5A49A] group cursor-pointer text-sm">
             <FontAwesomeIcon icon={faEnvelope} className="text-[#EEC044]" />
-            <span className="group-hover:underline">needhelp@company.com</span>
+            <span className="group-hover:underline">phrishikesh172@gmail.com</span>
           </li>
           <li className="flex items-center gap-2 cursor-pointer text-[#A5A49A] group text-sm">
             <FontAwesomeIcon
               icon={faLocationDot}
-              className="text-[#EEC044] group cursor-pointer"
+              className="text-[#EEC044]"
             />
             <span className="group-hover:underline">
               80 Brooklyn Golden Street, New York, USA

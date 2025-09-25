@@ -9,20 +9,18 @@ function About() {
         <section className="space-y-6">
           <header>
             <h1 className="sub-heading-1">Get to know us</h1>
-            <h2 className="heading-2">Leader in Agriculture Market</h2>
+            <h2 className="heading-2">About MaaKalika Agro Pvt Ltd</h2>
           </header>
           <p className="paragraph-1">
-            There are many variations of passages of Lorem Ipsum available
-            majority have suffered alteration in some form, by injected humour,
-            or randomised words which don’t look even slightly believable.
+          MaaKalika Agro Pvt Ltd blends modern technology with sustainable farming to deliver healthy, chemical-free produce.
           </p>
           <section className=" grid md:grid-cols-2 gap-10">
             <div className="space-y-2">
               <h1 className="sub-heading-1 !text-[#4BAF47]">
-                Modern agriculture types
+                Cultivating Future with Innovation
               </h1>
               <p className="paragraph-1">
-                We're here for you from start to finish
+             We empower farmers and promote eco-friendly practices, cultivating a greener future for all.
               </p>
             </div>
             <div>

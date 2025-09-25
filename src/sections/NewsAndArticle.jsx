@@ -6,18 +6,18 @@ function NewsAndArticle() {
   const blogsData = [
     {
       image: Image1,
-      heading: "Lorem Ipsum",
-      description: "Lorem Ipsum",
+      heading: "Smart Farming Techniques for Modern Agriculture",
+      description: "Discover how modern farming tools and technology can increase crop yield, reduce labor, and make sustainable agriculture easier for every farmer.",
     },
     {
       image: Image2,
-      heading: "Lorem Ipsum",
-      description: "Lorem Ipsum",
+      heading: "Organic Farming: Healthier Crops, Healthier Future",
+      description: "Learn the benefits of 100% organic farming practices, from soil enrichment to pesticide-free produce, and why it’s the future of farming.",
     },
     {
       image: Image3,
-      heading: "Lorem Ipsum",
-      description: "Lorem Ipsum",
+      heading: "Innovative Irrigation Methods That Save Water",
+      description: "Explore modern irrigation solutions like drip and sprinkler systems that maximize water efficiency and boost farm productivity.",
     },
   ];
   return (
@@ -36,7 +36,7 @@ function NewsAndArticle() {
               <img src={data?.image} className="max-h-48" />
             </div>
             {/* Content Section */}
-            <section className="bg-white shadow-md p-6 space-y-2 rounded-b-lg mt-0">
+            <section className="bg-white shadow-md p-6 space-y-2 rounded-b-lg mt-0 h-54">
               <h2 className="heading-3">{data?.heading}</h2>
               <p className="paragraph-1">{data?.description}</p>
             </section>
