@@ -1,11 +1,11 @@
 import Image1 from "../assets/About/Image1.png";
 import Image2 from "../assets/About/Image2.png";
-import Image3 from "../assets/About/Image3.png";
+import Image3 from "../assets/About/Image3.jpg";
 import BgImage from "../assets/About/BgImage1.png";
 function About() {
   return (
     <section className=" px-6 py-10 lg:py-16  md:px-20 lg:px-30" id="about">
-      <section className="grid grid-cols-1 md:grid-cols-2">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <section className="space-y-6">
           <header>
             <h1 className="sub-heading-1">Get to know us</h1>

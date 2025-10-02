@@ -1,6 +1,6 @@
 import { useState } from "react";
 import BgImage1 from "../assets/Faqs/BackgroundImage.png"
-import Image1 from "../assets/Faqs/Image1.png";
+import Image1 from "../assets/Faqs/Image2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -50,12 +50,14 @@ const faqData = [
           <div className="flex justify-center  lg:translate-x-34  items-center h-fit  md:justify-start  relative">
             <img
               src={Image1}
-              className="rounded-lg md:w-3/4  h-fit transition-all duration-400  "
+              className="rounded-lg md:w-3/4  h-120 transition-all duration-400  "
               alt="FAQ"
             />
-            <section className="bg-[#EEC044] rounded-t-2xl absolute bottom-0 left-[10%] px-8 py-3">
+            <section className="bg-[#EEC044] rounded-t-2xl absolute bottom-0 left-[10%] px-8 py-3 cursor-pointer"
+              onClick={() => window.location.href = "tel:7822815169"}
+            >
                 <h2 className="sub-heading-1 !text-white text-center">Call us anytime</h2>
-                <h3 className="heading-2 !text-white">666 888 0000</h3>
+                <h3 className="heading-2 !text-white">7822 81 5169</h3>
 
             </section>
           </div>

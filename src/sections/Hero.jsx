@@ -1,13 +1,14 @@
-import BgImage from "../assets/Hero/BgImage.png";
+import BgImage from "../assets/Hero/BgImage3.jpg";
 import ArrowImage from "../assets/Hero/ArrowImage.png";
 
 function Hero() {
   return (
     <section
     id="home"
-      className="py-10 lg:py-16 px-6 md:px-20 lg:px-30 bg-cover bg-no-repeat h-screen"
+      className="py-10 lg:py-16 px-6 md:px-20 lg:px-30  bg-cover bg-no-repeat h-screen "
       style={{
         backgroundImage: `url(${BgImage})`,
+        
       }}
     >
       <div className="h-full flex justify-center items-center">

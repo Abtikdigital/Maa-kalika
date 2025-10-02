@@ -1,6 +1,6 @@
 import Image1 from "../assets/Blogs/Image1.png";
 import Image2 from "../assets/Blogs/Image2.png";
-import Image3 from "../assets/Blogs/Image3.png";
+import Image3 from "../assets/Blogs/Image3.jpg";
 
 function NewsAndArticle() {
   const blogsData = [
@@ -33,7 +33,7 @@ function NewsAndArticle() {
           <div className="transition-all duration-300 hover:translate-y-3 cursor-pointer">
             {/* Image Section */}
             <div>
-              <img src={data?.image} className="max-h-48" />
+              <img src={data?.image} className="max-h-48 w-full" />
             </div>
             {/* Content Section */}
             <section className="bg-white shadow-md p-6 space-y-2 rounded-b-lg mt-0 h-54">

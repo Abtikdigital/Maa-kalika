@@ -1,7 +1,10 @@
 import { useRef, useState, useEffect } from "react";
-import Image1 from "../assets/OurServices/Image1.png";
-import Image2 from "../assets/OurServices/Image2.png";
-import Image3 from "../assets/OurServices/Image3.png";
+import SustainableFarmingImgae from "../assets/OurServices/SustainableFarming.jpg"
+import AgriTechImage from "../assets/OurServices/AgriTech.jpeg"
+import OrganicCropProductionImage from "../assets/OurServices/OrganicCropProduction.jpeg"
+import AgroSupplyChainImage from "../assets/OurServices/AgroSupplyChain.jpg"
+import TraningImage from "../assets/OurServices/TrainingFarmer.jpg"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTractor } from "@fortawesome/free-solid-svg-icons";
 
@@ -11,31 +14,31 @@ function OurServices() {
       heading: "Sustainable Farming Solutions",
       description:
         "Helping farmers adopt eco-friendly and high-yield methods for a better tomorrow.",
-      image: Image1,
+      image: SustainableFarmingImgae,
     },
     {
       heading: "Organic Crop Production",
       description:
         "From seeds to harvest – pure, chemical-free farming that ensures healthy produce.",
-      image: Image2,
+      image: OrganicCropProductionImage,
     },
     {
       heading: "Agri-Tech Consulting",
       description:
         "Introducing modern tools, irrigation systems, and smart practices for maximum productivity.",
-      image: Image3,
+      image: AgriTechImage,
     },
      {
       heading: "Agro Supply Chain & Distribution",
       description:
         "Connecting farmers directly with markets for fair pricing and faster delivery.",
-      image: Image3,
+      image: AgroSupplyChainImage,
     },
      {
       heading: "Training & Farmer Education",
       description:
         "Workshops, awareness programs, and training sessions for modern agricultural innovation.",
-      image: Image3,
+      image: TraningImage,
     },
   ];
 
@@ -67,7 +70,7 @@ function OurServices() {
             <img
               ref={(el) => (imageRefs.current[index] = el)}
               src={data.image}
-              className="w-full rounded-t-lg"
+              className="w-full max-h-72 rounded-t-lg"
               alt=""
             />
 
@@ -78,7 +81,7 @@ function OurServices() {
 
             {/* Button positioned based on image height */}
             <button
-              className="absolute right-5 bg-[#C5CE38] text-white p-3 rounded-lg shadow-md"
+              className="absolute right-4 bg-[#C5CE38] text-white p-3 rounded-lg shadow-md"
               style={{
                 top: imageHeights[index]
                   ? `${imageHeights[index] - 20}px`

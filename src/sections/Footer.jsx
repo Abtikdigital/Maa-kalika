@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Logo from "../assets/Logo/WhiteLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,8 +14,13 @@ import {
   faPaperPlane,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const navItems = [
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
@@ -28,8 +33,43 @@ const Footer = () => {
     const section = document.getElementById(id);
     if (section) {
       const yOffset = -80; // Adjust for navbar height
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
+  // Newsletter subscription
+  const handleSubscribe = async () => {
+    if (!email) {
+      Swal.fire({
+        icon: "warning",
+        title: "Missing Email",
+        text: "Please enter a valid email address.",
+      });
+      return;
+    }
+    try {
+      setLoading(true);
+      const response = await axios.post("https://your-api.com/api/subscribe", {
+        email,
+      });
+      Swal.fire({
+        icon: "success",
+        title: "Subscribed!",
+        text: response.data.message || "You have been subscribed successfully.",
+      });
+      setEmail("");
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Subscription Failed",
+        text:
+          error.response?.data?.message ||
+          "Something went wrong. Please try again.",
+      });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -46,6 +86,7 @@ const Footer = () => {
           {[faTwitter, faFacebook, faPinterest, faInstagram].map((icon, i) => (
             <a
               key={i}
+              href="#"
               className="bg-[#1F1E17] p-2.5 cursor-pointer rounded-full flex justify-center items-center hover:bg-[#4BAF47] transition-colors"
             >
               <FontAwesomeIcon
@@ -69,7 +110,7 @@ const Footer = () => {
           {navItems.map((item, index) => (
             <li
               key={index}
-              className="text-[#A5A49A] cursor-pointer flex items-center text-sm gap-2 w-fit  relative group"
+              className="text-[#A5A49A] cursor-pointer flex items-center text-sm gap-2 w-fit relative group"
             >
               <FontAwesomeIcon icon={faLeaf} className="text-[#EEC044]" />
               <button
@@ -77,7 +118,6 @@ const Footer = () => {
                 className="relative cursor-pointer"
               >
                 {item.name}
-                {/* Hover Filler Line */}
                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#4BAF47] transition-all duration-300 rounded-lg group-hover:w-full"></span>
               </button>
             </li>
@@ -93,29 +133,47 @@ const Footer = () => {
           <div className="w-1 h-1 rounded-full bg-[#4BAF47]"></div>
         </div>
         <ul className="flex flex-col gap-2">
-          <li className="flex items-center gap-2 text-[#A5A49A] group cursor-pointer text-sm">
+          <li className="flex items-center gap-2 text-[#A5A49A] group text-sm">
             <FontAwesomeIcon icon={faPhone} className="text-[#EEC044]" />
-            <span className="group-hover:underline">+91 7822 81 5169</span>
+            <a href="tel:+917822815169" className="group-hover:underline">
+              +91 7822 81 5169
+            </a>
           </li>
-          <li className="flex items-center gap-2 text-[#A5A49A] group cursor-pointer text-sm">
+          <li className="flex items-center gap-2 text-[#A5A49A] group text-sm">
             <FontAwesomeIcon icon={faEnvelope} className="text-[#EEC044]" />
-            <span className="group-hover:underline">phrishikesh172@gmail.com</span>
+            <a
+              href="mailto:phrishikesh172@gmail.com"
+              className="group-hover:underline"
+            >
+              phrishikesh172@gmail.com
+            </a>
           </li>
-          <li className="flex items-center gap-2 cursor-pointer text-[#A5A49A] group text-sm">
-            <FontAwesomeIcon
-              icon={faLocationDot}
-              className="text-[#EEC044]"
-            />
-            <span className="group-hover:underline">
+          <li className="flex items-center gap-2 text-[#A5A49A] group text-sm">
+            <FontAwesomeIcon icon={faLocationDot} className="text-[#EEC044]" />
+            <a
+              href="https://www.google.com/maps/place/21%C2%B032'44.8%22N+74%C2%B028'25.6%22E"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group-hover:underline"
+            >
               80 Brooklyn Golden Street, New York, USA
-            </span>
+            </a>
           </li>
+
+          {/* Newsletter Form */}
           <li className="relative w-full max-w-xs mt-2">
             <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="bg-[#F8F7F0] text-[#878680] pl-4 pr-12 py-2.5 w-full rounded-xl font-semibold h-12 focus:outline-none focus:ring-2 focus:ring-[#4BAF47]"
               placeholder="Your Email Address"
+              disabled={loading}
             />
-            <button className="bg-[#4BAF47] w-11 h-12 rounded-r-xl flex justify-center items-center absolute top-0 right-0 hover:bg-[#3a9e3c] cursor-pointer transition-colors">
+            <button
+              onClick={handleSubscribe}
+              disabled={loading}
+              className="bg-[#4BAF47] w-11 h-12 rounded-r-xl flex justify-center items-center absolute top-0 right-0 hover:bg-[#3a9e3c] cursor-pointer transition-colors disabled:opacity-50"
+            >
               <FontAwesomeIcon icon={faPaperPlane} className="text-white" />
             </button>
           </li>
