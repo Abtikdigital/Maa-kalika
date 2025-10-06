@@ -156,7 +156,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="group-hover:underline"
             >
-              80 Brooklyn Golden Street, New York, USA
+              Shop 29, KKP Business Centre, Shahada, 425409
             </a>
           </li>
 

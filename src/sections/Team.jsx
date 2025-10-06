@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Memeber1 from "../assets/Team/Member1.png";
+import Memeber1 from "../assets/Team/Member1.jpeg";
+import Member2 from "../assets/Team/Member2.jpeg"
 import { Share2, Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
 import React from "react";
 
@@ -35,7 +36,7 @@ function Team() {
     },
     {
       id: 2,
-      image: Memeber1,
+      image: Member2,
       name: "Sangitaben Mahendra Patil",
       position: "Director",
       socialLinks: {
@@ -114,7 +115,7 @@ function Team() {
             )}
 
             {/* Bottom Section */}
-            <section className="bg-white max-w-72 absolute right-0 bottom-0 rounded-tl-lg p-1 py-2 text-end px-10">
+            <section className="bg-white max-w-70 absolute right-0 bottom-0 rounded-tl-lg p-1 py-1 text-end px-10">
               <button
                 className="bg-[#4BAF47] p-0.5 rounded-xl text-white absolute -left-5 bottom-3 cursor-pointer"
                 onClick={() => handleSelect(data?.id)}
