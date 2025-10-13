@@ -6,6 +6,7 @@ import {
   faPinterest,
   faInstagram,
   faFacebook,
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
@@ -16,6 +17,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -83,14 +85,14 @@ const Footer = () => {
           the majority suffered.
         </p>
         <div className="flex gap-3 mt-2">
-          {[faTwitter, faFacebook, faPinterest, faInstagram].map((icon, i) => (
+          {[{icon: faInstagram,link:"https://www.instagram.com/hri_shi61/"},{icon:faLinkedin,link:"https://www.linkedin.com/in/hrishikesh-patil-296496276/"}].map((data, i) => (
             <a
               key={i}
-              href="#"
+              href={data?.link}
               className="bg-[#1F1E17] p-2.5 cursor-pointer rounded-full flex justify-center items-center hover:bg-[#4BAF47] transition-colors"
             >
               <FontAwesomeIcon
-                icon={icon}
+                icon={data?.icon}
                 className="text-white"
                 fontSize={20}
               />
@@ -143,6 +145,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faEnvelope} className="text-[#EEC044]" />
             <a
               href="mailto:phrishikesh172@gmail.com"
+              target="_blank"
               className="group-hover:underline"
             >
               phrishikesh172@gmail.com
@@ -151,7 +154,7 @@ const Footer = () => {
           <li className="flex items-center gap-2 text-[#A5A49A] group text-sm">
             <FontAwesomeIcon icon={faLocationDot} className="text-[#EEC044]" />
             <a
-              href="https://www.google.com/maps/place/21%C2%B032'44.8%22N+74%C2%B028'25.6%22E"
+              href="https://www.google.com/maps/place/21%C2%B032'44.8%22N+74%C2%B028'25.6%22E/@21.545774,74.4711887,17z/data=!3m1!4b1!4m4!3m3!8m2!3d21.545774!4d74.4737636?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="group-hover:underline"

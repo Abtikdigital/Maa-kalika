@@ -29,9 +29,9 @@ function Team() {
       position: "Director",
       socialLinks: {
         instagram: "https://www.instagram.com/hri_shi61/",
-        facebook: "https://www.facebook.com/jessica.brown.farmer",
+        // facebook: "https://www.facebook.com/jessica.brown.farmer",
         linkedin: "https://www.linkedin.com/in/hrishikesh-patil-296496276/",
-        twitter: "https://twitter.com/jessica_farmer",
+        // twitter: "https://twitter.com/jessica_farmer",
       },
     },
     {
@@ -40,10 +40,9 @@ function Team() {
       name: "Sangitaben Mahendra Patil",
       position: "Director",
       socialLinks: {
-        instagram: "https://www.instagram.com/michael_organic_farm",
-        facebook: "https://www.facebook.com/michael.johnson.organic",
-        linkedin: "https://www.linkedin.com/in/michael-johnson-organic",
-        twitter: "https://twitter.com/michael_organic",
+        instagram: "https://www.instagram.com/hri_shi61/",
+        facebook: "https://www.facebook.com/jessica.brown.farmer",
+        linkedin: "https://www.linkedin.com/in/hrishikesh-patil-296496276/",
       },
     },
   ];
@@ -102,7 +101,7 @@ function Team() {
                   <Linkedin size={16} color="#0077B5" />
                   LinkedIn
                 </a>
-                <a
+                {/* <a
                   className="flex items-center gap-2 p-2 px-3 cursor-pointer hover:bg-gray-50 transition-colors text-sm font-semibold text-gray-800"
                   href={data.socialLinks.twitter}
                   target="_blank"
@@ -110,7 +109,7 @@ function Team() {
                 >
                   <Twitter size={16} color="#1DA1F2" />
                   Twitter
-                </a>
+                </a> */}
               </div>
             )}
 

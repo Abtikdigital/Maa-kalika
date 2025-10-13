@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import BgImage1 from "../assets/Contact/BgImage.png";
-
+import BgImage2 from "../assets/Contact/LeftImage.jpg"
 function Contact() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -71,13 +71,14 @@ function Contact() {
     >
       {/* Google Map */}
       <section>
-        <iframe
-          src="https://www.google.com/maps/place/21%C2%B032'44.8%22N+74%C2%B028'25.6%22E"
+        {/* <iframe
+          src="https://www.google.com/maps/place/21%C2%B032'44.8%22N+74%C2%B028'25.6%22E/@21.545774,74.4711887,17z/data=!3m1!4b1!4m4!3m3!8m2!3d21.545774!4d74.4737636?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
           className="w-full h-116 rounded-md shadow-lg"
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        ></iframe> */}
+        <img src={BgImage2}  className="w-full h-116 rounded-md shadow-lg" />
       </section>
 
       {/* Contact Form */}
